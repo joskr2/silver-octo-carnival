@@ -14,44 +14,36 @@ class MyCalculator extends HTMLElement {
   render() {
     // Creación del HTML
     this._shadowRoot.innerHTML = `
-    <style>
-    #calculadora {
-      @apply bg-blue-500 rounded-lg p-4
-    }
-    #pantalla {
-      @apply bg-white text-right py-2 px-4 mb-2 rounded
-    } 
-    button {
-      @apply bg-blue-200 py-2 px-4 rounded-full m-2
-    }
-    #mensajeError {
-      @apply  bg-white text-red-800 text-right py-2 px-4 mb-2 rounded
-    }
 
-    
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
   </style>
+</head>
 
-  <div id="calculadora">
-    <div id="pantalla">
+  <div id="calculadora" class="bg-blue-500 rounded-lg p-4">
+    <div id="pantalla" class="bg-white text-right py-2 px-4 mb-2 rounded">
       ${this._currentNumber}
     </div>
 
-  <button>
+  <button class="bg-blue-200 py-2 px-4 rounded-full m-2">
   1
   </button>
-  <button>
+  <button class="bg-blue-200 py-2 px-4 rounded-full m-2">
   2
   </button>
-  <button>
+  <button class="bg-blue-200 py-2 px-4 rounded-full m-2">
   3
   </button>
-  <button>
+  <button class="bg-blue-200 py-2 px-4 rounded-full m-2">
   +
   </button>
-  <button>
+  <button class="bg-blue-200 py-2 px-4 rounded-full m-2">
   -
   </button>
-  <button>
+  <button class="bg-blue-200 py-2 px-4 rounded-full m-2">
   =
   </button>
 
